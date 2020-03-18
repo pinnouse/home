@@ -1,0 +1,82 @@
+html, body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    color: #0d3c46;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#bg {
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(30deg, #1bc2e4, #125a70);
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: block;
+    user-select: none;
+    flex: 0;
+    width: 280px;
+    height: 180px;
+    background: #ffffff;
+    padding: 14px;
+    box-shadow: 2px 3px 5px 1px rgba(25, 26, 27, 0.356);
+}
+
+h1 {
+    margin: 20px 0 4px;
+}
+
+span {
+    display: block;
+    color: #000000;
+}
+
+span > .ico {
+    display: inline-block;
+    height: 16px; 
+    width: 16px;
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+span > a {
+    color: #349cb6;
+    transition: .12s;
+}
+
+span > a:hover {
+    color: #24758a;
+}
+
+label {
+    display: block;
+    padding: 8px 0 3px;
+}
+
+.links > a {
+    display: inline-block;
+    opacity: 1;
+    transition: .16s;
+}
+
+.links > a:hover {
+    opacity: .92;
+}
+
+.links > a > img {
+    height: 32px;
+    width: 32px;
+}
