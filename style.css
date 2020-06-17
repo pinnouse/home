@@ -1,9 +1,13 @@
+:root {
+    --card-width: 380px;
+}
+
 html, body {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
-    color: #0d3c46;
+    color: #e1ecee;
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
@@ -12,36 +16,83 @@ html, body {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: linear-gradient(30deg, #1bc2e4, #125a70);
+    background: linear-gradient(160deg, #3b3d3d 0%, #393b3b 20%, #393b3b 70%, #37393a 100%);
 }
 
 .container {
     display: flex;
     width: 100%;
     height: 100%;
+    padding: 60px;
+    box-sizing: border-box;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.container.projects {
+    justify-content: flex-start;
 }
 
 .card {
     display: block;
     user-select: none;
     flex: 0;
-    width: 280px;
+    width: var(--card-width);
     height: 180px;
-    background: #ffffff;
-    padding: 14px;
-    box-shadow: 2px 3px 5px 1px rgba(25, 26, 27, 0.356);
+    background: #393b3b;
+    padding: 44px 60px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px -2px rgba(25, 26, 27, 0.897),
+        5px 4px 8px 0 rgba(25, 26, 27, 0.151),
+        -2px -2px 8px 2px rgba(88, 90, 92, 0.712);
+    transition: box-shadow .48s ease-in-out .2s,
+        opacity .17s ease-out;
+    margin-bottom: 60px;
+}
+
+.card.inactive {
+    box-shadow: none;
+    opacity: 0;
+    transition: box-shadow .48s ease-in-out,
+        opacity .17s ease-out .5s;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    transition: all 0.167s ease-out;
+}
+
+.image-container:hover {
+    margin-left: -40px;
+    width: calc(var(--card-width) + 80px);
+    height: 260px;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
 }
 
 h1 {
     margin: 20px 0 4px;
 }
 
+h2 {
+    margin: 44px 0 12px;
+}
+
 span {
     display: block;
-    color: #000000;
+    color: rgb(233, 243, 247);
 }
 
 span > .ico {
@@ -53,12 +104,17 @@ span > .ico {
 }
 
 span > a {
-    color: #349cb6;
+    color: #c4dde2;
     transition: .12s;
+    text-decoration: underline;
+}
+
+span > a:visited {
+    color: #c4dde2;
 }
 
 span > a:hover {
-    color: #24758a;
+    color: #7bcce0;
 }
 
 label {
@@ -70,6 +126,7 @@ label {
     display: inline-block;
     opacity: 1;
     transition: .16s;
+    margin-right: 8px;
 }
 
 .links > a:hover {
