@@ -40,6 +40,7 @@ html, body {
     flex: 0;
     width: var(--card-width);
     min-height: 180px;
+    min-height: min-content;
     height: 180px;
     height: min-content;
     background: #393b3b;
