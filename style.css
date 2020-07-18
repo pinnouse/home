@@ -39,7 +39,9 @@ html, body {
     user-select: none;
     flex: 0;
     width: var(--card-width);
+    min-height: 180px;
     height: 180px;
+    height: min-content;
     background: #393b3b;
     padding: 44px 60px;
     border-radius: 12px;
